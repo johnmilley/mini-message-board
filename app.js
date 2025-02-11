@@ -4,7 +4,7 @@ const path = require('node:path')
 const app = express()
 
 
-// set up view engine
+// set up VIEWS engine
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs")
 
@@ -16,6 +16,7 @@ const links = [
     { href: "about", text: "About" }
 ]
 
+// our MODEL
 const colours = [
     { name: 'red', count: 0 },
     { name: 'blue', count: 0 },
