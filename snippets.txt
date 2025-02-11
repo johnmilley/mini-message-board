@@ -1,0 +1,7 @@
+
+
+<select id="fav-color" name="fav-color">
+            <% for (let color of colors) { %>
+                <option value="<%= color.toLowerCase() %> "><%= color %></option>
+            <% } %>
+        </select>

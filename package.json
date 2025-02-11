@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  },
+  "name": "mini-message-board",
+  "description": "my attempt at the Odin Project's mini message board. Self imposed Time-limit: 1hr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

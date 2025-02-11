@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is your favourite color?</title>
+</head>
+<body>
+    <style>
+        .color-options {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+                width: 100px;
+                height: 50px;
+        }
+        .red { background-color: rgb(246, 32, 32);}
+        .blue { background-color: rgb(57, 145, 226);}
+        .orange { background-color: rgb(252, 174, 28);}
+        .yellow { background-color: rgb(255, 238, 0);}
+        .purple { background-color: rgb(208, 110, 208);}
+        .green { background-color: rgb(47, 223, 47);}
+    </style>
+    
+    <%- include('navbar', { links: links }) %> 
+    <h1><%= title %></h1>
+    <form action="/" method="POST" >
+
+        <fieldset>
+            <legend>Choose your favourite colour:</legend>
+            <div class="colour-options">
+                <% for (let colour of colours) { %>
+                    <input type="submit" value="<%= colour.name.toLowerCase() %>" name="fav-colour" class="btn <%= colour.name.toLowerCase() %>">
+                <% } %>
+            </div>
+        </fieldset>
+
+    </form>
+
+    <h2>Stats</h2>
+
+    <% for (let colour of colours) { %>
+        <p><%= colour.name%>: <%= colour.count%></p>
+    <% } %>
+
+</body>
+</html>
